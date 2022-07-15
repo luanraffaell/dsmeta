@@ -1,17 +1,14 @@
 
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import Header from "./components/Header"
 import SalesCard from "./components/SalesCard"
-import 'react-toastify/dist/ReactToastify.min.css';
-import { Toaster } from 'react-hot-toast';
+import 'react-toastify/dist/ReactToastify.css';
+//import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
     <>
-      <Toaster
-        position='top-right'
-        reverseOrder={false}
-      />
+     <ToastContainer />
       <Header />
       <main>
         <section id="sales">
