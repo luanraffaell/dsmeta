@@ -7,17 +7,16 @@ import 'react-toastify/dist/ReactToastify.min.css';
 function App() {
   return (
     <>
-
+      <ToastContainer />
       <Header />
       <main>
         <section id="sales">
           <div className="dsmeta-container">
             <SalesCard />
-            <ToastContainer />
           </div>
         </section>
       </main>
-      
+
     </>
   )
 }

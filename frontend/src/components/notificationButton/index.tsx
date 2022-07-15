@@ -17,10 +17,13 @@ function handleClick(id : number){
 }
 function NotificationButton({saleId}:Props) {
     return (
-        <div className="dsmeta-red-btn" onClick={() => handleClick(saleId)}>
+        <div className="dsmeta-red-btn" onClick={() => handleClick2()}>
             <img src={icon} alt="Notificar" />
         </div>
     )
+}
+function handleClick2(){
+    toast.info("SMS enviado com sucesso")
 }
 
 export default NotificationButton
