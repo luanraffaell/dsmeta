@@ -41,7 +41,12 @@ public class SaleController {
 	}
 	
 	@GetMapping("/{id}/notification")
-	public void notifySms(@PathVariable Long id) {
+	public ResponseEntity<?> notifySms(@PathVariable Long id) {
+		try {
 		smsService.sendSms(id);
+		return ResponseEntity.ok().build();
+		}catch(EntidadeNaoEncontradaException e) {
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+		}
 	}
 }
