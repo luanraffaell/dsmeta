@@ -26,6 +26,7 @@ public class SmsService {
 	
 	@Autowired
 	private SaleService saleService;
+	
 
 	public void sendSms(Long salesId) {
 		
